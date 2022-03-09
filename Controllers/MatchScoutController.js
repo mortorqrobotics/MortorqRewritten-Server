@@ -8,7 +8,7 @@ module.exports.submitForm = async (req, res) => {
     let formatedForm = {user: user, team: team, match: match, _id: id};
     response?.forEach(item => {
         let value = "";
-        if(item.type === "slider") {
+        if(item.type === "slider" || item.type === "timer") {
             value = parseInt(item.value)
         }
         else if(item.type === "yesno" || item.type === "comment") {
