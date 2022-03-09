@@ -19,7 +19,7 @@ module.exports.MatchScout = {
     "climbHighMade": "Climb high made",
     "climbTravAtt": "Climb traversal attempted",
     "climbTravMade": "Climb traversal made",
-    "comments": "String",
+    "comments": "General comments",
     "defense": "Played defense?"
 }
 
@@ -39,7 +39,7 @@ module.exports.PitScout = {
     "comments": "General comments"
 }
 
-module.exports.PitScoutReverse = swap(module.exports.MatchScout);
+module.exports.PitScoutReverse = swap(module.exports.PitScout);
 
 function swap(json){
     var ret = {};

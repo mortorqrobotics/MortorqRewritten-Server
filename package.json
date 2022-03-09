@@ -4,9 +4,13 @@
   "description": "MorscoutRR backend",
   "main": "server.js",
   "dependencies": {
+    "cloudinary": "^1.28.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.1",
+    "google-spreadsheet": "^3.2.0",
     "mongoose": "^6.2.4",
+    "multer": "^1.4.4",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {},

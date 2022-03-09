@@ -48,11 +48,17 @@ const PitScoutSchema = new Schema({
     doesAuto: Boolean,
     autoProgram: String,
     doesDefense: Boolean,
-    whatIsDefense: Boolean,
+    whatIsDefense: String,
     comments: String,
     imageURL: String
 })
 
-module.exports.User = mongoose.model("User", UserSchema);
-module.exports.PitScout = mongoose.model("PitScout", PitScoutSchema);
-module.exports.MatchScout = mongoose.model("MatchScout", MatchScoutSchema);
+const GoogleSheetSchema = new Schema({
+    _id: Schema.Types.ObjectId,
+    googleURL: String
+})
+
+module.exports.User = mongoose.model("User", UserSchema, "Users");
+module.exports.PitScout = mongoose.model("PitScout", PitScoutSchema, "PitScouts");
+module.exports.MatchScout = mongoose.model("MatchScout", MatchScoutSchema, "MatchScouts");
+module.exports.GoogleSheet = mongoose.model("GoogleSheet", MatchScoutSchema, "GoogleSheets");
